@@ -4,3 +4,9 @@
 *.ptx
 *.cubin
 *.fatbin
+results*
+fd-2d/fd-2d
+.vscode/
+cuda-dev-blog/
+*.fig
+*.png
