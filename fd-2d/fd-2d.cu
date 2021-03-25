@@ -7,7 +7,7 @@
 #include <fstream>
 
 using prec = double;
-using cu_prec = double;
+using cu_prec = float;
 
 //
 // For intellisense
@@ -932,11 +932,11 @@ void solve_wave_eq_cpu(int n, int n_steps, int n_animate)
 int main(void)
 {
 
-    int nx = n_per_b * 100;
-    int ny = n_per_b * 100;
+    int nx = n_per_b * 400;
+    int ny = n_per_b * 400;
 
     int n_steps = 500;
-    int n_animate = 30;
+    int n_animate = 1;
 
     double t1, t2;
 
@@ -949,23 +949,23 @@ int main(void)
     // std::cout << "Time for CPU Wave Equation = " << t2-t1 << std::endl;
 
 
-    t1 = omp_get_wtime();
+    // t1 = omp_get_wtime();
 
-    solve_wave_eq_gpu(nx, n_steps, n_animate);
+    // solve_wave_eq_gpu(nx, n_steps, n_animate);
     
-    t2 = omp_get_wtime();
+    // t2 = omp_get_wtime();
 
-    std::cout << "Time for GPU Wave Equation = " << t2-t1 << std::endl;
+    // std::cout << "Time for GPU Wave Equation = " << t2-t1 << std::endl;
 
 
 
     // solve_wave_eq(nx, n_steps);
 
-    // fd_2d_cpu(nx, ny);
+    fd_2d_cpu(nx, ny);
 
-    // fd_2d_gpu_v0(nx, ny);
+    fd_2d_gpu_v0(nx, ny);
 
-    // fd_2d_gpu_v1(nx, ny);
+    fd_2d_gpu_v1(nx, ny);
 
     return 0;
 }
