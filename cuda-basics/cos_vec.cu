@@ -21,9 +21,9 @@ using cu_prec = float;
 
 #define N_REP 200
 
-// For Double Precision
-using cu_prec = double;
-#define cu_cos cos
+// // For Double Precision
+// using cu_prec = double;
+// #define cu_cos cos
 
 // CUDA Kernel
 __global__ void fill_vec(cu_prec *f, cu_prec *x, int n)

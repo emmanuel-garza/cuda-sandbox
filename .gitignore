@@ -6,6 +6,7 @@
 *.fatbin
 results*
 fd-2d/fd-2d
+fd-3d/fd-3d
 .vscode/
 cuda-dev-blog/
 *.fig

@@ -1,3 +1,15 @@
+//
+// For intellisense
+//
+#ifdef __INTELLISENSE__
+#include <cuda.h>
+#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
+#include <device_functions.h>
+#include <cuda_runtime_api.h>
+#endif
+
+
 #include <stdio.h>
 #include <iostream>
 #include <assert.h>
@@ -9,16 +21,6 @@
 using prec = double;
 using cu_prec = float;
 
-//
-// For intellisense
-//
-#ifdef __INTELLISENSE__
-#include <cuda.h>
-#include "cuda_runtime.h"
-#include "device_launch_parameters.h"
-#include <device_functions.h>
-#include <cuda_runtime_api.h>
-#endif
 
 //
 // Convenience function for checking CUDA runtime API results
